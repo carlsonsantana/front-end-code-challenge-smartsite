@@ -1,0 +1,5 @@
+.form {
+  border: 6px solid var(--color-lightest);
+  border-bottom: 10px solid var(--color-lightest);
+  border-radius: 14px;
+}

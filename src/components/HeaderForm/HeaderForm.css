@@ -1,0 +1,16 @@
+.header-form {
+  height: 2em;
+}
+
+.header-form img {
+  width: 2em;
+  height: inherit;
+}
+
+.header-form span {
+  display: inline-block;
+  height: 1em;
+  position: relative;
+  top: -0.6em;
+  color: var(--color-light);
+}

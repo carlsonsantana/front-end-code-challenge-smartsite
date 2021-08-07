@@ -1,6 +1,8 @@
 :root {
   --color-strongest: #000;
   --color-strong: #333;
+  --color-light: #808080;
+  --color-lightest: #ededed;
 }
 
 body {
