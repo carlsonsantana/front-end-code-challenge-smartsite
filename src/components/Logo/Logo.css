@@ -1,0 +1,11 @@
+.header-logo {
+  background-color: #000;
+  text-align: center;
+}
+
+.header-logo img {
+  width: 378px;
+  height: 140px;
+  padding: 0;
+  margin: 60px 0;
+}
