@@ -1,5 +1,5 @@
 .header-logo {
-  background-color: #000;
+  background-color: var(--color-strongest);
   text-align: center;
 }
 
