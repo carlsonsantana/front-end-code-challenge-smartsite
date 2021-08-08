@@ -1,0 +1,9 @@
+.training-time-item {
+  display: flex;
+  border-bottom: 1px solid var(--color-lightest);
+  color: var(--color-light);
+}
+
+.training-time-item .time-period {
+  flex-grow: 1;
+}
