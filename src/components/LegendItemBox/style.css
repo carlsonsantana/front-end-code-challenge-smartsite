@@ -1,0 +1,27 @@
+.legend-item-box {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 992px) {
+  .legend-item-box {
+    flex-basis: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .legend-item-box {
+    flex-basis: 100%;
+  }
+}
+
+.legend-item-box strong {
+  display: block;
+  text-align: center;
+}
+
+.legend-items {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}

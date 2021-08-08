@@ -1,0 +1,5 @@
+.legend {
+  display: flex;
+  flex-flow: row wrap;
+  background-color: var(--background-color-lightest);
+}
