@@ -2,10 +2,67 @@
   border: 6px solid var(--color-lightest);
   border-bottom: 10px solid var(--color-lightest);
   border-radius: 14px;
+
+  --background-color-submit-button: #ffb612;
+  --background-color-submit-button-hover: #efb010;
+  --background-color-submit-button-active: #e0a507;
+  --border-color-submit-button-hover: var(--background-submit-button-active);
+  --border-color-submit-button-active: #d09502;
+
+  --background-color-clear-button: #fff;
+  --background-color-clear-button-hover: var(--color-lightest);
+  --background-color-clear-button-active: #ccc;
+  --border-color-clear-button: var(--background-color-clear-button-active);
+  --border-color-clear-button-active: var(--color-light);
 }
 
 .same-line {
   display: flex;
   flex-flow: row wrap;
   color: var(--color-strong);
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+  color: var(--color-strongest);
+  align-items: center;
+  justify-content: center;
+}
+
+.form button {
+  width: 330px;
+  height: 50px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.submit-button {
+  background-color: var(--background-color-submit-button);
+  border: 0;
+}
+
+.submit-button:hover {
+  background-color: var(--background-color-submit-button-hover);
+  border: 2px solid var(--border-color-submit-button-hover);
+}
+
+.submit-button:active {
+  background-color: var(--background-color-submit-button-active);
+  border: 2px solid var(--border-color-submit-button-active);
+}
+
+.clear-button {
+  background-color: var(--background-color-clear-button);
+  border: 2px solid var(--border-color-clear-button);
+}
+
+.clear-button:hover {
+  background-color: var(--background-color-clear-button-hover);
+}
+
+.clear-button:active {
+  background-color: var(--background-color-clear-button-active);
+  border-color: var(--border-color-clear-button-active);
 }

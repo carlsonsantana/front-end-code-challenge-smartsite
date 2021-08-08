@@ -16,6 +16,10 @@ export default function Form() {
         <ShowClosedUnits />
         <Counter />
       </div>
+      <div className="buttons">
+        <button className="submit-button">Encontrar unidade</button>
+        <button className="clear-button">Limpar</button>
+      </div>
     </div>
   );
 }
