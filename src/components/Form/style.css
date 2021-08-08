@@ -3,3 +3,9 @@
   border-bottom: 10px solid var(--color-lightest);
   border-radius: 14px;
 }
+
+.same-line {
+  display: flex;
+  flex-flow: row wrap;
+  color: var(--color-strong);
+}

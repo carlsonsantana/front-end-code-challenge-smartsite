@@ -1,0 +1,9 @@
+.counter-container {
+  text-align: center;
+}
+
+@media only screen and (max-width: 576px) {
+  .counter-container {
+    flex: 0 0 100%;
+  }
+}
