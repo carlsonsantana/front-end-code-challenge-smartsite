@@ -27,7 +27,7 @@ export default function TrainingTime() {
       <legend>Qual período quer treinar?</legend>
 
       {TRAINING_TIMES.map(({label, start, end}, index) =>
-        <TrainingTimeItem label={label} start={start} end={end} />
+        <TrainingTimeItem key={index} label={label} start={start} end={end} />
       )}
     </fieldset>
   );
