@@ -1,7 +1,8 @@
 import React from 'react';
 
 import HeaderForm from '../HeaderForm';
-import './Form.css';
+
+import './style.css';
 
 export default function Form() {
   return (

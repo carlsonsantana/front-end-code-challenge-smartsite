@@ -1,7 +1,7 @@
 import React from 'react';
 
 import iconHour from '../../assets/images/icon-hour.png';
-import './HeaderForm.css';
+import './style.css';
 
 export default function HeaderForm() {
   return (
