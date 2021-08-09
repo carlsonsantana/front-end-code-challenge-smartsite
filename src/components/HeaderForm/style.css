@@ -1,16 +1,13 @@
-.header-form {
-  height: 2em;
-}
-
 .header-form img {
-  width: 2em;
+  width: 30px;
   height: inherit;
 }
 
 .header-form span {
   display: inline-block;
-  height: 1em;
   position: relative;
-  top: -0.6em;
+  top: -0.7em;
   color: var(--color-light);
+  font-family: "Gotham Light", sans-serif;
+  font-size: 0.6em;
 }
