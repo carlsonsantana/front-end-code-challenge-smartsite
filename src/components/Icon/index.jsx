@@ -1,6 +1,6 @@
 import React from 'react';
 
-import iconLoader from '../../helper/icon_loader.jsx';
+import iconLoader from '../../helper/icon_loader';
 
 import './style.css';
 

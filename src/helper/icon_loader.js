@@ -1,5 +1,3 @@
-import React from 'react';
-
 import requiredMaskIcon from '../assets/images/required-mask.png';
 import recommendedMaskIcon from '../assets/images/recommended-mask.png';
 import requiredTowelIcon from '../assets/images/required-towel.png';
