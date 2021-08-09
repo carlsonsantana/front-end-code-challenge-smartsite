@@ -5,6 +5,7 @@
 .header h1 {
   font-family: "Gotham Bold", sans-serif;
   text-transform: uppercase;
+  margin: 90px 0 40px 0;
 }
 
 .header h1:after {
@@ -14,4 +15,14 @@
   max-width: 100px;
   border-bottom: 10px solid var(--color-strong);
   content: "";
+  margin-top: 20px;
+}
+
+.header-body {
+  width: var(--site-width);
+  margin: 0 auto;
+}
+
+.header p {
+  margin: 0;
 }

@@ -35,7 +35,20 @@ export default function CardList() {
     'closed',
     schedules
   );
-  const units = [vicenteLinharesUnit, vilaCarraoUnit];
+  const vilaCarraoUnit2 = createUnit(
+    3,
+    'Vila Carrão',
+    'Av. Guilherme Giorgi, 1460, Vila Carrão',
+    'São Paulo',
+    'SP',
+    false,
+    'required',
+    'required',
+    'partial',
+    'closed',
+    schedules
+  );
+  const units = [vicenteLinharesUnit, vilaCarraoUnit, vilaCarraoUnit2];
 
   return (
     <div className="card-list">

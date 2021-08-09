@@ -1,4 +1,9 @@
 .card-list {
   display: flex;
+  flex-flow: row wrap;
   gap: 20px;
+  width: var(--site-width);
+  margin: 0 auto;
+  align-content: center;
+  justify-content: center;
 }

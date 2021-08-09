@@ -5,6 +5,7 @@
 @media screen and (max-width: 992px) {
   .legend-item-box {
     flex-basis: 50%;
+    margin-top: 45px;
   }
 }
 

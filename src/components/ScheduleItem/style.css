@@ -1,4 +1,9 @@
 .schedule {
   display: inline-block;
-  margin-right: 16px;
+  margin: 30px 18px 0 0;
+  color: var(--color-card-item-title);
+}
+
+.schedule strong {
+  font-size: 1.25em;
 }

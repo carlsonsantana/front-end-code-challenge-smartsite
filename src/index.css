@@ -4,6 +4,13 @@
   --color-light: #808080;
   --color-lightest: #ededed;
   --background-color-lightest: #f5f5f5;
+  --site-width: 948px;
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --site-width: 90%;
+  }
 }
 
 @font-face {
