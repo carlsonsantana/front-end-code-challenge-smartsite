@@ -1,16 +1,8 @@
 import React from 'react';
 
 import LegendItemBox from '../LegendItemBox';
+import iconLoader from '../../helper/icon_loader';
 
-import requiredMaskIcon from '../../assets/images/required-mask.png';
-import recommendedMaskIcon from '../../assets/images/recommended-mask.png';
-import requiredTowelIcon from '../../assets/images/required-towel.png';
-import recommendedTowelIcon from '../../assets/images/recommended-towel.png';
-import partialFountainIcon from '../../assets/images/partial-fountain.png';
-import forbiddenFountainIcon from '../../assets/images/forbidden-fountain.png';
-import requiredLockerroomIcon from '../../assets/images/required-lockerroom.png';
-import partialLockerroomIcon from '../../assets/images/partial-lockerroom.png';
-import forbiddenLockerroomIcon from '../../assets/images/forbidden-lockerroom.png';
 import './style.css';
 
 export default function Legend() {
@@ -26,37 +18,32 @@ export default function Legend() {
 }
 
 function createItemBoxes() {
-  const requiredLabel = 'Obrigatório';
-  const recommendedLabel = 'Recomendado';
-  const partialLabel = 'Parcial';
+  const requiredStatus = createStatus('required', 'Obrigatório');
+  const recommendedStatus = createStatus('recommended', 'Recomendado');
+  const partialStatus = createStatus('partial', 'Parcial');
+  const forbiddenStatus = createStatus('not_allowed', 'Proibido');
+  const allowedStatus = createStatus('allowed', 'Liberado');
+  const closedStatus = createStatus('closed', 'Fechado');
 
-  const requiredMask = createItem(requiredMaskIcon, requiredLabel);
-  const recommendedMask = createItem(recommendedMaskIcon, recommendedLabel);
   const maskItemBox = createItemBox(
     'Máscara',
-    [requiredMask, recommendedMask]
+    'mask',
+    [requiredStatus, recommendedStatus]
   );
-
-  const requiredTowel = createItem(requiredTowelIcon, requiredLabel);
-  const recommendedTowel = createItem(recommendedTowelIcon, recommendedLabel);
   const towelItemBox = createItemBox(
     'Toalha',
-    [requiredTowel, recommendedTowel]
+    'towel',
+    [requiredStatus, recommendedStatus]
   );
-
-  const partialFountain = createItem(partialFountainIcon, partialLabel);
-  const forbiddenFountain = createItem(forbiddenFountainIcon, 'Proibido');
   const fountainItemBox = createItemBox(
     'Bebedouro',
-    [partialFountain, forbiddenFountain]
+    'fountain',
+    [partialStatus, forbiddenStatus]
   );
-
-  const requiredLockerroom = createItem(requiredLockerroomIcon, 'Liberado');
-  const partialLockerroom = createItem(partialLockerroomIcon, partialLabel);
-  const forbiddenLockerroom = createItem(forbiddenLockerroomIcon, 'Fechado');
   const lockerroomItemBox = createItemBox(
     'Vestiários',
-    [requiredLockerroom, partialLockerroom, forbiddenLockerroom]
+    'locker_room',
+    [allowedStatus, partialStatus, closedStatus]
   );
 
   return [
@@ -67,10 +54,15 @@ function createItemBoxes() {
   ];
 }
 
-function createItem(icon, label) {
-  return {icon, label};
+function createStatus(status, label) {
+  return {status, label};
 }
 
-function createItemBox(label, items) {
+function createItemBox(label, resource, allStatus) {
+  const items = allStatus.map(({status, label}) => {
+    const icon = iconLoader(resource, status);
+    return {icon, label};
+  });
+
   return {label, items};
 }
