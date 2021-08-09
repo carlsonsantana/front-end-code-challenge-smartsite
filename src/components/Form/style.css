@@ -11,8 +11,6 @@
   --background-color-submit-button: #ffb612;
   --background-color-submit-button-hover: #efb010;
   --background-color-submit-button-active: #e0a507;
-  --border-color-submit-button-hover: var(--background-submit-button-active);
-  --border-color-submit-button-active: #d09502;
 
   --background-color-clear-button: #fff;
   --background-color-clear-button-hover: var(--color-lightest);
@@ -54,12 +52,10 @@
 
 .submit-button:hover {
   background-color: var(--background-color-submit-button-hover);
-  border: 2px solid var(--border-color-submit-button-hover);
 }
 
 .submit-button:active {
   background-color: var(--background-color-submit-button-active);
-  border: 2px solid var(--border-color-submit-button-active);
 }
 
 .clear-button {
