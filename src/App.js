@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Form from './components/Form';
 import Legend from './components/Legend';
 import CardList from './components/CardList';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Form />
       <Legend />
       <CardList />
+      <Footer />
     </div>
   );
 }

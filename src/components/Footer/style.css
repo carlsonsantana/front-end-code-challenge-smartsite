@@ -1,0 +1,14 @@
+footer {
+  background-color: var(--color-strong);
+  text-align: center;
+  color: #fff;
+  padding: 50px 0 80px 0;
+}
+
+footer img {
+  height: 42px;
+}
+
+footer p {
+  margin: 0;
+}
