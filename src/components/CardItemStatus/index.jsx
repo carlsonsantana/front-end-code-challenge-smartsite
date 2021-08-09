@@ -7,5 +7,5 @@ export default function CardItemStatus({opened}) {
   const statusCSSClass = opened ? 'opened' : 'closed';
   const statusCompleteCSSClass = `card-item-status ${statusCSSClass}`;
 
-  return <span className={statusCompleteCSSClass}>{statusDescription}</span>;
+  return <strong className={statusCompleteCSSClass}>{statusDescription}</strong>;
 }

@@ -6,6 +6,35 @@
   --background-color-lightest: #f5f5f5;
 }
 
+@font-face {
+  font-family: "Gotham Light";
+  src: local("Gotham Light"), local("GothamLight"),
+       url("assets/fonts/gotham-light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Book";
+  src: local("Gotham Book"), local("GothamBook"),
+       url("assets/fonts/gotham-book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Bold";
+  src: local("Gotham Bold"), local("GothamBold"),
+       url("assets/fonts/gotham-bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Gotham Black";
+  src: local("Gotham Black"), local("GothamBlack"),
+       url("assets/fonts/gotham-black.woff2") format("woff2");
+}
+
 body {
   margin: 0;
+  font-family: "Gotham Book";
+}
+
+strong {
+  font-family: "Gotham Bold";
 }

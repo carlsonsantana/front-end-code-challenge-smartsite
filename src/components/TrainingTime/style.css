@@ -7,4 +7,6 @@
   border-bottom: 1px solid var(--color-lightest);
   width: 100%;
   color: var(--color-light);
+  font-family: "Gotham Light";
+  font-size: 1.5em;
 }
