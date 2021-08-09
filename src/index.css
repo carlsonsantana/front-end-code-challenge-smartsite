@@ -32,9 +32,9 @@
 
 body {
   margin: 0;
-  font-family: "Gotham Book";
+  font-family: "Gotham Book", sans-serif;
 }
 
 strong {
-  font-family: "Gotham Bold";
+  font-family: "Gotham Bold", sans-serif;
 }

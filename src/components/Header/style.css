@@ -3,7 +3,7 @@
 }
 
 .header h1 {
-  font-family: "Gotham Bold";
+  font-family: "Gotham Bold", sans-serif;
   text-transform: uppercase;
 }
 

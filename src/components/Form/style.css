@@ -36,7 +36,7 @@
   box-sizing: border-box;
   text-transform: uppercase;
   border-radius: 4px;
-  font-family: "Gotham Bold";
+  font-family: "Gotham Bold", sans-serif;
   font-size: 1rem;
 }
 
