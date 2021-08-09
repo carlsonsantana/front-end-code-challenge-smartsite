@@ -1,0 +1,14 @@
+.card-item-status {
+  display: block;
+
+  --color-status-opened: #2fc022;
+  --color-status-closed: #dc0a17;
+}
+
+.card-item-status.opened {
+  color: var(--color-status-opened);
+}
+
+.card-item-status.closed {
+  color: var(--color-status-closed);
+}

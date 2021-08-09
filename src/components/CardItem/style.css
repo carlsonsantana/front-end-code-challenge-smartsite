@@ -1,0 +1,20 @@
+.card-item {
+  background-color: var(--background-color-lightest);
+  border-radius: 6px;
+  box-shadow: 0 0 3px 2px var(--color-lightest);
+  padding: 16px;
+
+  --color-card-item-title: #444;
+}
+
+.card-item-name, .card-item-address, .card-item-city {
+  display: block;
+}
+
+.card-item-name {
+  color: var(--color-card-item-title);
+}
+
+.card-item-address, .card-item-city {
+  color: var(--color-light);
+}
