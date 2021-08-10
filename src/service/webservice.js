@@ -26,18 +26,20 @@ function convertRawUnitToUnit(rawUnit) {
 }
 
 function convertRawUnitType1ToUnit(rawUnit) {
+  const title = rawUnit.title.replace('&#8217;', '\'');
   const content = rawUnit.content.replace(
     /&#8211;/g,
     '-'
   ).replace(/<p>/g, '').replace(/<\/p>/g, '').replace(
     /<span>.*<\/span>/g,
     ''
-  ).trim();
+  ).replace('&#8217;', '\'').trim();
   const [street, cityState] = content.split('<br>');
   const [city, uf] = cityState.trim().split(', ');
 
   const unit = {
     ...rawUnit,
+    title,
     street,
     city,
     uf,
@@ -48,9 +50,11 @@ function convertRawUnitType1ToUnit(rawUnit) {
 }
 
 function convertRawUnitType2ToUnit(rawUnit) {
+  const title = rawUnit.title.replace('&#8217;', '\'');
   const street = rawUnit.street + ' - ' + rawUnit.region;
   const unit = {
     ...rawUnit,
+    title,
     street,
     city: rawUnit.city_name,
   };
