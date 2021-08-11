@@ -12,8 +12,8 @@ export default function CardItem({unit}) {
     <div className="card-item">
       <CardItemStatus opened={opened} />
       <strong className="card-item-name">{title}</strong>
-      <span className="card-item-address">{street}</span>
-      <span className="card-item-city">{city}, {uf}</span>
+      {street ? <span className="card-item-address">{street}</span> : ''}
+      {city ? <span className="card-item-city">{city}, {uf}</span> : ''}
       <CardItemExtraInfo unit={unit} />
     </div>
   );

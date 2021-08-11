@@ -18,7 +18,7 @@ function convertJSONToUnits(data) {
 }
 
 function convertRawUnitToUnit(rawUnit) {
-  if (rawUnit.content) {
+  if (typeof rawUnit.content == typeof '') {
     return convertRawUnitType1ToUnit(rawUnit);
   }
 
@@ -34,8 +34,20 @@ function convertRawUnitType1ToUnit(rawUnit) {
     /<span>.*<\/span>/g,
     ''
   ).replace('&#8217;', '\'').trim();
-  const [street, cityState] = content.split('<br>');
-  const [city, uf] = cityState.trim().split(', ');
+
+  const hasAddressInfo = content.length > 0;
+  let street;
+  let city;
+  let uf;
+  if (hasAddressInfo) {
+    let cityState;
+    [street, cityState] = content.split('<br>');
+    [city, uf] = cityState.trim().split(', ');
+  } else {
+    street = null;
+    city = null;
+    uf = null;
+  }
 
   const unit = {
     ...rawUnit,
