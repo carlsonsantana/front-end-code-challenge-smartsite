@@ -6,4 +6,13 @@
   margin: 0 auto;
   align-content: center;
   justify-content: center;
+
+  --color-card-item-title: #444;
+}
+
+.card-list-empty {
+  background-color: var(--background-color-lightest);
+  padding: 40px;
+  color: var(--color-card-item-title);
+  font-size: 2em;
 }

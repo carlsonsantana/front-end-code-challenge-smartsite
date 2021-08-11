@@ -6,8 +6,6 @@
   box-shadow: 0 0 3px 2px #ddd;
   padding: 16px;
   box-sizing: border-box;
-
-  --color-card-item-title: #444;
 }
 
 .card-item-name, .card-item-address, .card-item-city {
