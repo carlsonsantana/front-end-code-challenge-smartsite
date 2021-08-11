@@ -7,7 +7,7 @@ import CardItem from '../CardItem';
 import './style.css';
 
 function CardList(props) {
-  const units = props.units.units ? props.units.units : [];
+  const units = props.units.unitsFound ? props.units.unitsFound : [];
 
   return (
     <div className="card-list">

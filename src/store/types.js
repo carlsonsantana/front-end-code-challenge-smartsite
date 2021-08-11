@@ -1,1 +1,2 @@
 export const FIND_UNITS = 'FIND_UNITS';
+export const SET_TRAINING_TIME = 'SET_TRAINING_TIME';

@@ -7,7 +7,7 @@ import TrainingTime from '../TrainingTime';
 import ShowClosedUnits from '../ShowClosedUnits';
 import Counter from '../Counter';
 import loadUnits from '../../service/webservice';
-import findUnits from '../../store/actions/find_units';
+import {findUnits} from '../../store/actions/find_units';
 
 import './style.css';
 
