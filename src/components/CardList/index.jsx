@@ -22,4 +22,4 @@ function mapStateToProps(state) {
   return {units: state.units};
 }
 
-export default connect(mapStateToProps, null)(CardList);
+export default connect(mapStateToProps)(CardList);
