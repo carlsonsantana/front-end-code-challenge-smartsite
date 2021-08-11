@@ -1,10 +1,15 @@
-import {FIND_UNITS, SET_TRAINING_TIME} from '../types';
+import {
+  FIND_UNITS,
+  SET_TRAINING_TIME,
+  SET_INCLUDE_UNITS_CLOSED
+} from '../types';
 
 const INITIAL_STATE = {
   units: null,
   unitsFound: null,
   filters: {
-    trainingTime: null
+    trainingTime: null,
+    includeUnitsClosed: false
   },
 };
 
@@ -12,10 +17,13 @@ export default function unitsReducer(
   state = INITIAL_STATE,
   {type, payload}
 ) {
+  let filters;
   switch (type) {
     case FIND_UNITS:
       const units = payload;
-      const unitsFound = units.filter(filterByTrainingTime(state));
+      const unitsFound = units.filter(
+        filterByTrainingTime(state)
+      ).filter(filterByUnitsClosed(state));
 
       return {
         ...state,
@@ -24,10 +32,21 @@ export default function unitsReducer(
       };
     case SET_TRAINING_TIME:
       const trainingTime = payload;
-      const filters = {
+      filters = {
         ...state.filters,
         trainingTime
       };
+
+      return {
+        ...state,
+        filters
+      };
+    case SET_INCLUDE_UNITS_CLOSED:
+      const includeUnitsClosed = payload;
+      filters = {
+        ...state.filters,
+        includeUnitsClosed
+      }
 
       return {
         ...state,
@@ -76,5 +95,13 @@ function hasScheduleSameSime(startTrainingTime, endTrainingTime) {
       );
     }
     return accumulator || false;
+  }
+}
+
+function filterByUnitsClosed({filters}) {
+  return (unit) => {
+    const {includeUnitsClosed} = filters;
+
+    return includeUnitsClosed || unit.opened;
   }
 }
