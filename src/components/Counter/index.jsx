@@ -4,19 +4,19 @@ import {connect} from 'react-redux';
 
 import './style.css';
 
-function Counter(props) {
-  const units = props.units.unitsFound ? props.units.unitsFound : [];
-  const unitsLength = units.length;
-
+function Counter({number}) {
   return (
     <div className="counter-container">
-      Resultados encontrados: <strong>{unitsLength}</strong>
+      Resultados encontrados: <strong>{number}</strong>
     </div>
   );
 }
 
 function mapStateToProps(state) {
-  return {units: state.units};
+  const units = state.units.unitsFound ? state.units.unitsFound : [];
+  const unitsLength = units.length;
+
+  return {number: unitsLength};
 }
 
 export default connect(mapStateToProps)(Counter);

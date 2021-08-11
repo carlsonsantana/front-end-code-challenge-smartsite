@@ -6,9 +6,7 @@ import CardItem from '../CardItem';
 
 import './style.css';
 
-function CardList(props) {
-  const units = props.units.unitsFound ? props.units.unitsFound : [];
-
+function CardList({units}) {
   return (
     <div className="card-list">
       {units.map((unit, index) => (
@@ -19,7 +17,7 @@ function CardList(props) {
 }
 
 function mapStateToProps(state) {
-  return {units: state.units};
+  return {units: state.units.unitsFound};
 }
 
 export default connect(mapStateToProps)(CardList);
