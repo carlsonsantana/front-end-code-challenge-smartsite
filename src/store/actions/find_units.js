@@ -1,7 +1,8 @@
 import {
   FIND_UNITS,
   SET_TRAINING_TIME,
-  SET_INCLUDE_UNITS_CLOSED
+  SET_INCLUDE_UNITS_CLOSED,
+  RESET_FIELDS
 } from '../types';
 
 export function findUnits(units) {
@@ -14,4 +15,8 @@ export function setTrainingTime(trainingTime) {
 
 export function setIncludeUnitsClosed(includeUnitsClosed) {
   return {type: SET_INCLUDE_UNITS_CLOSED, payload: includeUnitsClosed};
+}
+
+export function resetFields() {
+  return {type: RESET_FIELDS};
 }

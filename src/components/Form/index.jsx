@@ -7,7 +7,7 @@ import TrainingTime from '../TrainingTime';
 import ShowClosedUnits from '../ShowClosedUnits';
 import Counter from '../Counter';
 import loadUnits from '../../service/webservice';
-import {findUnits} from '../../store/actions/find_units';
+import {findUnits, resetFields} from '../../store/actions/find_units';
 
 import './style.css';
 
@@ -38,7 +38,10 @@ class Form extends React.Component {
             className="submit-button"
             onClick={this.findAndFilterUnits}
           >Encontrar unidade</button>
-          <button className="clear-button">Limpar</button>
+          <button
+            className="clear-button"
+            onClick={this.props.resetFields}
+          >Limpar</button>
         </div>
       </div>
     );
@@ -46,7 +49,10 @@ class Form extends React.Component {
 }
 
 function mapDispatchToProps(dispatch) {
-  return {findUnits: units => dispatch(findUnits(units))};
+  return {
+    findUnits: units => dispatch(findUnits(units)),
+    resetFields: () => dispatch(resetFields()),
+  };
 }
 
 export default connect(null, mapDispatchToProps)(Form);

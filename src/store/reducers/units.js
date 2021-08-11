@@ -1,7 +1,8 @@
 import {
   FIND_UNITS,
   SET_TRAINING_TIME,
-  SET_INCLUDE_UNITS_CLOSED
+  SET_INCLUDE_UNITS_CLOSED,
+  RESET_FIELDS
 } from '../types';
 
 const INITIAL_STATE = {
@@ -47,6 +48,13 @@ export default function unitsReducer(
         ...state.filters,
         includeUnitsClosed
       }
+
+      return {
+        ...state,
+        filters
+      };
+    case RESET_FIELDS:
+      filters = {...INITIAL_STATE.filters};
 
       return {
         ...state,

@@ -25,11 +25,16 @@ class ShowClosedUnits extends React.Component {
           value="true"
           name="show-closed-units"
           id="show-closed-units"
-          onChange={this.changeIncludeUnitsClosed} />
+          onChange={this.changeIncludeUnitsClosed}
+          checked={this.props.includeUnitsClosed} />
         <label htmlFor="show-closed-units">Exibir unidades fechadas</label>
       </div>
     );
   }
+}
+
+function mapStateToProps(state) {
+  return {includeUnitsClosed: state.units.filters.includeUnitsClosed};
 }
 
 function mapDispatchToProps(dispatch) {
@@ -40,4 +45,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(null, mapDispatchToProps)(ShowClosedUnits);
+export default connect(mapStateToProps, mapDispatchToProps)(ShowClosedUnits);
